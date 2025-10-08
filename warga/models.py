@@ -18,6 +18,11 @@ class Pengaduan(models.Model):
         ('SELESAI', 'Selesai'),
     ]
     
+    PELAPOR_CHOICES = [
+        ('BARU', 'Baru'),
+        ('DIPROSES', 'Diproses'),
+        ('SELESAI', 'Selesai'),
+    ]
     judul = models.CharField(max_length=200)
     deskripsi = models.TextField()
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='BARU')
