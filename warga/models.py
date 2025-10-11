@@ -31,5 +31,5 @@ class Pengaduan(models.Model):
     # Kunci relasinya ada di sini!
     pelapor = models.ForeignKey(Warga, on_delete=models.CASCADE, related_name='Pengaduan')
 
-    def _str_(self):
+    def __str__(self):
         return self.judul
